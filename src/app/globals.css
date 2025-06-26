@@ -1,0 +1,130 @@
+ /* Reset the margin and padding of body and html */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  /* Your other global styles */
+  :root {
+    --bg-color: #121417;
+    --text-color: white;
+    --subtitle-color: #d4d4d8;
+    --nav-bg: #2d3748;
+    --nav-text: #cbd5e0;
+    --nav-hover-bg: #4a5568;
+    --nav-hover-text: white;
+    --footer-color: #6b7280;
+    --link-color: #3b82f6;
+  }
+
+  [data-theme='light'] {
+    --bg-color: #f9fafb;
+    --text-color: #1a202c;
+    --subtitle-color: #4a5568;
+    --nav-bg: #e2e8f0;
+    --nav-text: #1a202c;
+    --nav-hover-bg: #cbd5e1;
+    --nav-hover-text: #1a202c;
+    --footer-color: #718096;
+    --link-color: #2563eb;
+  }
+  main {
+          min-height: 100vh;
+          background-color: var(--bg-color);
+          color: var(--text-color);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          font-family: monospace;
+          text-align: center;
+          padding: 1rem;
+          transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        h1 {
+          font-weight: 700;
+          font-size: 1.75rem;
+          margin: 0.5rem 0 0.25rem;
+        }
+        .subtitle {
+          font-weight: 600;
+          font-size: 0.9rem;
+          margin-bottom: 1.5rem;
+          color: var(--subtitle-color);
+        }
+        .profile-image {
+          border-radius: 50%;
+          overflow: hidden;
+          width: 100px;
+          height: 100px;
+          margin-bottom: 0.5rem;
+          background: white;
+          border: 2px solid var(--text-color);
+        }
+        .theme-toggle {
+          font-size: 1.5rem;
+          background: none;
+          border: none;
+          margin-bottom: 1.5rem;
+          cursor: pointer;
+          color: var(--text-color);
+          transition: color 0.3s ease;
+        }
+        .nav-links {
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 3rem;
+        }
+        .nav-link {
+          background-color: var(--nav-bg);
+          padding: 0.75rem 1rem;
+          border-radius: 4px;
+          font-weight: 600;
+          text-decoration: none;
+          color: var(--nav-text);
+          transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .nav-link:hover {
+          background-color: var(--nav-hover-bg);
+          color: var(--nav-hover-text);
+        }
+        footer {
+          font-size: 0.75rem;
+          color: var(--footer-color);
+          max-width: 400px;
+          line-height: 1.5;
+        }
+        footer a {
+          color: var(--link-color);
+          text-decoration: none;
+        }
+        footer a:hover {
+          text-decoration: underline;
+        }
+        :root {
+          --bg-color: #121417;
+          --text-color: white;
+          --subtitle-color: #d4d4d8;
+          --nav-bg: #2d3748;
+          --nav-text: #cbd5e0;
+          --nav-hover-bg: #4a5568;
+          --nav-hover-text: white;
+          --footer-color: #6b7280;
+          --link-color: #3b82f6;
+        }
+        [data-theme='light'] {
+          --bg-color: #f9fafb;
+          --text-color: #1a202c;
+          --subtitle-color: #4a5568;
+          --nav-bg: #e2e8f0;
+          --nav-text: #1a202c;
+          --nav-hover-bg: #cbd5e1;
+          --nav-hover-text: #1a202c;
+          --footer-color: #718096;
+          --link-color: #2563eb;
+        }
+
+
+  /* Rest of your global styles */
+

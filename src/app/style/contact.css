@@ -1,0 +1,120 @@
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contact Page Layout */
+.contact-container {
+  text-align: center;
+  padding: 11rem 2rem 2rem;
+  margin: 0 5%; /* Add space between left and right */
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-header p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Social Media Icons Container */
+.social-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-color: var(--item-bg);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.social-icon:hover {
+  background-color: var(--item-hover-bg);
+}
+
+/* Home Button */
+.home-button {
+  background-color: var(--footer-color);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: var(--item-hover-bg);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  border: 2px solid var(--link-color);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  color: var(--link-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--item-hover-bg);
+}
+
+/* Global theme settings */
+[data-theme="light"] {
+  --bg-color: #f9fafb;
+  --text-color: #1a202c;
+  --item-bg: #edf2f7;
+  --item-hover-bg: #e2e8f0;
+  --link-color: #2563eb;
+  --footer-color: #6b7280;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121417;
+  --text-color: white;
+  --item-bg: #2d3748;
+  --item-hover-bg: #4a5568;
+  --link-color: #2563eb;
+  --footer-color: #718096;
+}
+
+/* Global Styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}

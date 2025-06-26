@@ -1,0 +1,172 @@
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Header Section */
+.post-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.post-header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.post-header p {
+  font-size: 1.2rem;
+  color: var(--footer-color);
+}
+
+/* Layout Container */
+.post-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Table of Contents (TOC) - Sidebar */
+.toc {
+  position: sticky;
+  top: 1rem; /* Keeps the sidebar fixed */
+  width: 25%;
+  height: calc(100vh - 4rem); /* Ensures the TOC doesn't overflow */
+  max-height: 50vh;
+  padding-top: 2rem;
+  overflow-y: auto; /* Allow scrolling within the TOC if content is too long */
+  z-index: 10;
+  border: 2px solid var(--item-border-color);
+  border-radius: 10px;
+  background-color: var(--item-bg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-left: 6rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--item-border-color) transparent;
+}
+
+.toc h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+.toc ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 2rem;
+}
+
+.toc ul li {
+  margin-bottom: 0.5rem;
+}
+
+.toc ul li a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-size: 1.1rem;
+  display: block;
+}
+
+.toc ul li a:hover {
+  color: var(--item-hover-bg);
+}
+
+.toc ul li.active a {
+  color: var(--item-selected-bg); /* Highlight active section */
+}
+
+.toc-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 10px;
+  color: var(--link-color);
+}
+
+.toc-item button:hover {
+  color: var(--item-hover-bg);
+}
+
+/* Blog Content */
+.post-content {
+  width: 65%;
+  margin-left: 1rem;
+  margin-right: 2rem; /* Right column for blog content */
+}
+
+.post-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section h3 {
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+section p {
+  font-size: 1.2rem;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  position: fixed;
+  top: 1rem;
+  border: none;
+  right: 1rem;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  color: var(--link-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Global theme settings */
+[data-theme='light'] {
+  --bg-color: #f9fafb;
+  --text-color: #1a202c;
+  --item-bg: #edf2f7;
+  --item-hover-bg: #e2e8f0;
+  --item-selected-bg: #2563eb;
+  --link-color: #2563eb;
+  --footer-color: #6b7280;
+  --item-border-color: #d1d5db;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121417;
+  --text-color: white;
+  --item-bg: #2d3748;
+  --item-hover-bg: #4a5568;
+  --item-selected-bg: #2563eb;
+  --link-color: #2563eb;
+  --footer-color: #718096;
+  --item-border-color: #4a5568;
+}
+
+/* Global Styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
