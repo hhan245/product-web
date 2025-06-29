@@ -22,14 +22,14 @@ export default function AboutPage() {
   
   const codingBiases = [
     { name: 'Notion', icon: 'notion.png' },
-    { name: 'Miro', icon: 'miro.png' },
+    { name: '  Miro', icon: 'miro.png' },
     { name: 'Microsoft 365', icon: 'microsoft365.png' },
     { name: 'Google Workspace', icon: 'googleworkspace.webp' },
     { name: 'Canva', icon: 'canva.webp' },
     { name: 'Adobe Illustrator', icon: 'adobe.png' },
     { name: 'Tableau', icon: 'tableau.svg' },
     { name: 'HTML', icon: 'html.png' },
-    { name: 'CSS', icon: 'css.png' },
+    { name: '  CSS', icon: 'css.png' },
     { name: 'JavaScript', icon: 'javascript.png' },
     { name: 'Postman', icon: 'postman.png' },
     { name: 'GitHub', icon: 'github.png' },
@@ -84,7 +84,7 @@ export default function AboutPage() {
       
 
       <div className="buttons">
-        <a href="https://drive.google.com/file/d/12nteenrPm1bHqw88cskYrHUgGjcryAwC/view?usp=sharing" className="button">CV</a>
+        <a href="https://drive.google.com/file/d/1GHzNHM9e1KISiMqzM8QXGgU0Jfqz6isU/view?usp=drive_link" className="button">CV</a>
       </div>
       <p className="question">Welcome to the little corner of the Internet where Hân iu ơi becomes a vibe 🌷</p>
       {/* Get to know me Section */}
@@ -131,7 +131,6 @@ export default function AboutPage() {
             <div key={index} className="activity-card">
               <h3>{activities.title}</h3>
               <p>{activities.description}</p>
-    
             </div>
           ))}
         </div>
@@ -146,7 +145,6 @@ export default function AboutPage() {
           {theme === 'dark' ? '🌙' : '☀️'}
         </button>
       </div>
-
       
     </main>
   );

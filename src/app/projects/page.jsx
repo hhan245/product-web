@@ -5,52 +5,32 @@ import { useState, useEffect } from "react";
 
 const projects = [
   {
-    title: "Diabetes Prediction",
-    techStack: ["Python"],
+    title: "🏥Jio Health",
     description:
-      "Predicting a patient’s diabetes status based on specific diagnostic metrics found in the dataset is the task at hand.",
+      "Proposed a strategic initiative to virtualize hospitals in the Metaverse using digital twins",
     image: "/images/pj1.png",
-    github: "https://github.com/hhan245/Predict-Diabetes",
+    link: "/projects/jio-health",
   },
   {
-    title: "Emotion Recognition",
-    techStack: [
-      "Python"
-    ],
+    title: "🍕The Jazza",
     description:
-      "Worked on training machine learning models for emotion recognition using available datasets",
+      "A sales management system for sales Pizza and order management.",
     image: "/images/pj2.png",
-    github: "https://github.com/hhan245/Emotion-Recognition",
+    link:  "https://www.youtube.com/watch?v=iKXkZXyRXFg&ab_channel=Ph%C6%B0%C6%A1ngNghi",
   },
   {
-    title: "Oil Spill Detection",
-    techStack: [
-      "Python"
-    ],
+    title: "🛒Cart Patrol",
     description:
-      " Applied machine learning techniques for binary classification of oil spill incidents using satellite imagery.",
+      "Designed a shopping cart app using HCI principles to reduce impulsive purchases",
     image: "/images/pj3.png",
-    github: "https://github.com/hhan245/Oil-Spill",
+    link: "/projects/cart-patrol",
   },
   {
-    title: "The Jazza",
-    techStack: [
-      "Java", "MySQL", "HTML"
-    ],
+    title: "💿CD Sales Website",
     description:
-      " Developed sales management system and integrate a database to store customer and order data securely.",
+      "Conducted product research to identify the needs of both customers and store managers.",
     image: "/images/pj4.png",
-    github: "https://github.com/hhan245/The-Jazza",
-  },
-  {
-    title: "Codae - CD Sales Website",
-    techStack: [
-      "JavaScript", "CSS", "Next.js", "Strapi"
-    ],
-    description:
-      " Built a sales website and integrated a CMS for dynamic content updates, balancing user experience with business requirements.",
-    image: "/images/pj5.png",
-    github: "https://github.com/hhan245/Codae",
+    link: "https://github.com/hhan245/Codae",
   },
 ];
 
@@ -85,13 +65,12 @@ export default function ProjectsPage() {
               className="project-image"
             />
             <h3>{project.title}</h3>
-            <p className="tech-stack">{project.techStack.join("  ")}</p>
             <p>{project.description}</p>
             <div className="project-links">
-              <a href={project.github} target="_blank" rel="noopener noreferrer">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <img
-                  src="/images/github.png"
-                  alt="GitHub"
+                  src="/images/readmore.png"
+                  alt="Read more"
                   className="github-icon"
                 />
               </a>
