@@ -4,48 +4,40 @@ import { ChevronDown, ChevronRight, Sun, Moon, Clock, Calendar, BookOpen } from 
 import "../../style/blog-post.css"; 
 
 const blogContent = {
-  title: "What Makes a Good Visualization?",
-  date: "Thursday, 5 June, 2025",
-  readTime: "8 min read",
+  title: "Web Development",
+  date: "Thursday, 7 August, 2025",
+  readTime: "7 min read",
   description:
-    "I often find myself not just crunching numbers but telling stories. And one of the most powerful ways to tell a story is through visualization. But what makes a good visualization? I recently revisited a classic visual by David McCandless that breaks it down beautifully—and I’d like to reflect on how it applies to our work.",
+    "How to make a website that is fast, secure, and user-friendly? This blog explores the latest trends in web development, including responsive design, progressive web apps, and serverless architecture.",
   content: [
     {
-      sectionTitle: "🔍 The 4 Elements of a Powerful Visualization",
-      body: "David’s Venn diagram presents four intersecting dimensions that contribute to successful visual communication:",
+      sectionTitle: "1. Introduction",
+      body: "Web development is an ever-evolving field that combines creativity and technology to create engaging user experiences. In this blog, we will explore the latest trends and best practices in web development, focusing on how to build fast, secure, and user-friendly websites.",
+      icon: "🌐",
+    },
+    {
+      sectionTitle: "2. Responsive Design",
+      icon: "🎯",
+      body: "Responsive design is about creating web pages that look good on all devices. This means using flexible layouts, images, and CSS media queries to ensure a seamless user experience across different screen sizes.",
       subsections: [
         {
-          title: "1. Information (Data) – Integrity",
-          body: "This is where we start: the accuracy, consistency, and honesty of the data. A chart is only as useful as the trust we can place in its source. Messy, incomplete, or misleading data can sabotage everything else.",
+          title: "Mobile-First Approach",
+          body: "Designing for mobile first ensures that your website is optimized for the most common device used to access the web today.",
         },
         {
-          title: "2. Story (Concept) – Interestingness",
-          body: `Data without narrative is forgettable. What patterns matter? What’s the “so what”? The story connects data to meaning, making it relevant, new, or even surprising.
-                 In my projects, I find this is where stakeholders light up—when a scatterplot becomes a trend, or a number becomes a question.`
-        },
-        {
-          title: "3. Goal (Function) – Usefulness",
-          body: `Every chart should have a purpose. Is it meant to compare, track, explain, or predict? A successful visualization has a clear function, making it efficient and actionable.
-                 I often check myself: Is this chart answering the question the business is actually asking—or just looking nice?`
-,
-        },
-        {
-          title: "4. Visual Form (Metaphor) – Beauty",
-          body: `This is where design thinking meets analytics. The goal isn’t just to make something “pretty,” but to create harmony, clarity, and structure. A good visual should guide the eye and calm the brain.
-                 Color, spacing, typography, chart type—they all matter. A pie chart might be perfect in one case, and completely misleading in another.`
+          title: "Fluid Grids",
+          body: "Using fluid grids allows your layout to adapt to different screen sizes without breaking the design.",
         },
       ],
     },
     {
-      sectionTitle: "The Sweet Spot: Successful Visualization",
-      icon: "🎯",
-      body: "A successful visualization that is honest, engaging, purposeful, and beautiful. It’s not just “data art.” It’s not just “pretty charts.” It’s not even just “analysis.” It’s communication. And when done right, it can change minds, drive action, and shape strategy.",
+      sectionTitle: "3. Progressive Web Apps (PWAs)",
+      icon: "🧠",
+      body: "Progressive Web Apps combine the best of web and mobile apps. They are fast, reliable, and can work offline. PWAs use modern web capabilities to deliver an app-like experience directly in the browser.",
     },
     {
-      sectionTitle: "Final Thoughts",
-      icon: "🧠",
-      body: "As analysts, we’re not just number-crunchers. We’re storytellers, designers, and translators. Visualizations are one of our most powerful tools—but only when we balance art, data, and purpose.",
-    },
+      sectionTitle: "Coming soon...",
+    }
   ],
 };
 
@@ -135,7 +127,7 @@ export default function App() {
         <header className="blog-header">
           <div className="category-badge">
             <BookOpen className="category-icon" />
-            Design
+            Development
           </div>
           
           <h1 className="blog-title">
