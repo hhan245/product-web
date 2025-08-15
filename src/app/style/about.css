@@ -110,7 +110,7 @@ body {
 }
 .floating3 {
   position: absolute;
-  width: 250px;
+  width: 350px;
   animation: float 5s ease-in-out infinite;
 }
 .floating4 {
@@ -120,7 +120,7 @@ body {
 }
 .floating5 {
   position: absolute;
-  width: 200px;
+  width: 220px;
   animation: float 5s ease-in-out infinite;
 }
 .floating6 {
@@ -206,6 +206,7 @@ body {
   max-width: 400px;
   left: 642px;
   position: absolute;
+  font-style: bolt;
 }
 
 .main-title {

@@ -202,9 +202,9 @@ useEffect(() => {
      {/* HERO with magic wand */}
         <section className="hero-section-floating magic-area" ref={magicRef}>
             {/* Floating elements */}
-            <img src="/images/another/Rabbit.png" className="floating floating1" alt="Rabbit" />
+            <img src="/images/another/Rabbit.png" className="floating floating3" alt="Rabbit" />
             <img src="/images/another/Palette.png" className="floating floating2" alt="Palette" />
-            <img src="/images/another/Bust and Brushes.png" className="floating floating3" alt="Bust" />
+            <img src="/images/another/Bust and Brushes.png" className="floating floating1" alt="Bust" />
             <img src="/images/another/Breaker.png" className="floating floating5" alt="Beaker" />
             <img src="/images/another/Saucer.png" className="floating floating6" alt="Saucer" />
             <img src="/images/another/Teacup.png" className="floating floating4" alt="Teacup" />
@@ -213,7 +213,7 @@ useEffect(() => {
             <div className="center-profile">
               <img src="/images/another/han2.png" alt="Han" className="profile-main" />
               <div className="profile-info">
-                <p className="vietnamese-name">Nguyen Xuan Han | Han | 阮春欣</p>
+                <p className="name">Nguyen Xuan Han | Han | 阮春欣</p>
               </div>
             </div>
            {/* draw sparkles here so coords match the hero */}
