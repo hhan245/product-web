@@ -1,3 +1,4 @@
+import Loader from './components/loader';
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -7,6 +8,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
+        <Loader />
       </body>
     </html>
   );

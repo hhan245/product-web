@@ -1,0 +1,18 @@
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #0e0e0e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+#loader img {
+  width: 100px;
+  margin-bottom: 1rem;
+}

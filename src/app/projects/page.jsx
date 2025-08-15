@@ -7,7 +7,7 @@ const projects = [
   {
     title: "🏥 Jio Health",
     description: "Proposed a strategic initiative to virtualize hospitals in the Metaverse using digital twins. Revolutionary healthcare approach combining VR technology with medical services.",
-    image: "/images/pj1.png",
+    image: "/images/projects/pj1.png",
     link: "/projects/jio-health",
     type: "internal",
     tags: ["Metaverse", "Healthcare", "Digital Twins"]
@@ -15,7 +15,7 @@ const projects = [
   {
     title: "🍕 The Jazza",
     description: "A comprehensive sales management system for pizza ordering and delivery management. Features real-time order tracking and inventory management.",
-    image: "/images/pj2.png",
+    image: "/images/projects/pj2.png",
     link: "https://www.youtube.com/watch?v=iKXkZXyRXFg&ab_channel=Ph%C6%B0%C6%A1ngNghi",
     type: "external",
     tags: ["Management", "Sales", "React"]
@@ -23,7 +23,7 @@ const projects = [
   {
     title: "🛒 Cart Patrol",
     description: "Designed a shopping cart app using HCI principles to reduce impulsive purchases. Behavioral design meets e-commerce for mindful shopping experiences.",
-    image: "/images/pj3.png",
+    image: "/images/projects/pj3.png",
     link: "/projects/cart-patrol",
     type: "internal",
     tags: ["UX/UI", "E-commerce", "Psychology"]
@@ -31,7 +31,7 @@ const projects = [
   {
     title: "💿 CD Sales Website",
     description: "Conducted product research to identify the needs of both customers and store managers. Full-stack e-commerce solution with analytics dashboard.",
-    image: "/images/pj4.png",
+    image: "/images/projects/pj4.png",
     link: "https://github.com/hhan245/Codae",
     type: "github",
     tags: ["E-commerce", "Research", "Full-stack", "Analytics"]

@@ -1,7 +1,7 @@
 'use client';
+import { useState, useEffect, useRef } from 'react';
 import "../style/about.css"; 
 
-import { useState, useEffect } from 'react';
 import { 
   Download, 
   MapPin, 
@@ -22,6 +22,67 @@ export default function AboutPage() {
   const [theme, setTheme] = useState('dark');
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+  const magicRef = useRef(null);
+  const sparkleLayerRef = useRef(null);
+
+useEffect(() => {
+  const area = magicRef.current;
+  const layer = sparkleLayerRef.current;
+  if (!area || !layer) return;
+
+  const createSparkle = (x, y) => {
+    const s = document.createElement("span");
+    s.className = "sparkle";
+    const size = Math.random() * 10 + 6;
+    s.style.width = `${size}px`;
+    s.style.height = `${size}px`;
+    s.style.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+    s.style.left = `${x}px`;
+    s.style.top = `${y}px`;
+    layer.appendChild(s);
+    s.addEventListener("animationend", () => s.remove());
+  };
+
+  let last = 0;
+  const handleMove = (e) => {
+    const now = performance.now();
+    if (now - last < 16) return; // Giới hạn FPS ~60
+    last = now;
+
+    const rect = layer.getBoundingClientRect();
+    const clientX = e.clientX ?? (e.touches && e.touches[0].clientX);
+    const clientY = e.clientY ?? (e.touches && e.touches[0].clientY);
+    if (clientX == null) return;
+
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
+    createSparkle(x, y);
+  };
+
+  area.addEventListener("mousemove", handleMove);
+  area.addEventListener("touchmove", handleMove, { passive: true });
+
+  return () => {
+    area.removeEventListener("mousemove", handleMove);
+    area.removeEventListener("touchmove", handleMove);
+  };
+}, []);
+
+  // --- theming / visibility ---
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    setIsVisible(true);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  };
+
 
   const educations = [
     {
@@ -47,41 +108,41 @@ export default function AboutPage() {
     {
       category: 'Design & Creativity',
       skills: [
-        { name: 'Miro', icon: 'miro.png', level: 75 },
-        { name: 'Canva', icon: 'canva.webp', level: 95 },
-        { name: 'Adobe Illustrator', icon: 'adobe.png', level: 75 },
-        { name: 'Figma', icon: 'figma.png', level: 75 }
+        { name: 'Miro', icon: '/tools/miro.png', level: 75 },
+        { name: 'Canva', icon: '/tools/canva.webp', level: 95 },
+        { name: 'Adobe Illustrator', icon: '/tools/adobe.png', level: 75 },
+        { name: 'Figma', icon: '/tools/figma.png', level: 75 }
 
       ]
     },
     {
       category: 'Productivity & Collaboration',
       skills: [
-        { name: 'Microsoft 365', icon: 'microsoft365.png', level: 92 },
-        { name: 'Google Workspace', icon: 'googleworkspace.webp', level: 95 },
-        { name: 'GitHub', icon: 'github.png', level: 85 },
-        { name: 'Notion', icon: 'notion.png', level: 80 },
+        { name: 'Microsoft 365', icon: '/tools/microsoft365.png', level: 92 },
+        { name: 'Google Workspace', icon: '/tools/googleworkspace.webp', level: 95 },
+        { name: 'GitHub', icon: '/tools/github.png', level: 85 },
+        { name: 'Notion', icon: '/tools/notion.png', level: 80 },
       ]
     },
     {
       category: 'Data & Analytics',
       skills: [
-        { name: 'Tableau', icon: 'tableau.svg', level: 80 },
-        { name: 'SQL', icon: 'sql.png', level: 60 },
-        { name: 'Excel', icon: 'excel.png', level: 90 },
-        { name: 'Python', icon: 'python.png', level: 70 }
+        { name: 'Tableau', icon: '/tools/tableau.svg', level: 80 },
+        { name: 'SQL', icon: '/tools/sql.png', level: 60 },
+        { name: 'Excel', icon: '/tools/excel.png', level: 90 },
+        { name: 'Python', icon: '/tools/python.png', level: 70 }
 
       ]
     },
     {
       category: 'Development',
       skills: [
-        { name: 'HTML', icon: 'html.png', level: 85 },
-        { name: 'CSS', icon: 'css.png', level: 82 },
-        { name: 'JavaScript', icon: 'javascript.png', level: 90 },
-        { name: 'React', icon: 'react.png', level: 80 },
-        { name: 'Node.js', icon: 'nodejs.png', level: 80 },
-        { name: 'Postman', icon: 'postman.png', level: 85 },
+        { name: 'HTML', icon: '/tools/html.png', level: 85 },
+        { name: 'CSS', icon: '/tools/css.png', level: 82 },
+        { name: 'JavaScript', icon: '/tools/javascript.png', level: 90 },
+        { name: 'React', icon: '/tools/react.png', level: 80 },
+        { name: 'Node.js', icon: '/tools/nodejs.png', level: 80 },
+        { name: 'Postman', icon: '/tools/postman.png', level: 85 },
 
        
       ]
@@ -122,13 +183,6 @@ export default function AboutPage() {
     document.documentElement.setAttribute('data-theme', savedTheme);
     setIsVisible(true);
   }, []);
-
-  const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  };
   
   
   return (
@@ -145,54 +199,27 @@ export default function AboutPage() {
       </div>
       <main className={`about-container ${isVisible ? 'visible' : ''}`}>
 
-      {/* Hero Section */}
-      <section className="hero-section">
-        <div className="hero-content">
-          
-          <div className="profile-section">
-            <div className="profile-image-container">
-              <img
-                src="/images/han.jpg"
-                alt="Han's Avatar"
-                className="profile-image"
-              />
-              <div className="status-indicator"></div>
-            </div>
-            <div className="profile-info">
-              <h1 className="main-title">Hi there! I'm Han</h1>
-              <div className="name-variants">
-                <span className="name-primary">{personalInfo.fullName}</span>
-                <span className="name-separator">|</span>
-                <span className="name-nickname">{personalInfo.nickname}</span>
-                <span className="name-separator">|</span>
-                <span className="name-vietnamese">{personalInfo.vietnameseName}</span>
+     {/* HERO with magic wand */}
+        <section className="hero-section-floating magic-area" ref={magicRef}>
+            {/* Floating elements */}
+            <img src="/images/another/Rabbit.png" className="floating floating1" alt="Rabbit" />
+            <img src="/images/another/Palette.png" className="floating floating2" alt="Palette" />
+            <img src="/images/another/Bust and Brushes.png" className="floating floating3" alt="Bust" />
+            <img src="/images/another/Breaker.png" className="floating floating5" alt="Beaker" />
+            <img src="/images/another/Saucer.png" className="floating floating6" alt="Saucer" />
+            <img src="/images/another/Teacup.png" className="floating floating4" alt="Teacup" />
+
+            {/* Main profile image */}
+            <div className="center-profile">
+              <img src="/images/another/han2.png" alt="Han" className="profile-main" />
+              <div className="profile-info">
+                <p className="vietnamese-name">Nguyen Xuan Han | Han | 阮春欣</p>
               </div>
-              
-              <div className="location-status">
-                <div className="location">
-                  <MapPin className="icon" />
-                  <span>{personalInfo.location}</span>
-                </div>
-                <div className="status">
-                  <Award className="icon" />
-                  <span>{personalInfo.status}</span>
-                </div>
-              </div>
-              <p className="tagline">Welcome to the little corner of the Internet where Haniuoi becomes a vibe 🌸</p>
             </div>
-          </div>
-          
-          <div className="hero-actions">
-            <a href="https://drive.google.com/file/d/1GHzNHM9e1KISiMqzM8QXGgU0Jfqz6isU/view?usp=drive_link" 
-               className="cv-button" 
-               target="_blank" 
-               rel="noopener noreferrer">
-              <Download className="icon" />
-              My CV
-            </a>
-          </div>
-        </div>
-      </section>
+           {/* draw sparkles here so coords match the hero */}
+          <div className="sparkle-layer" ref={sparkleLayerRef} />
+        </section>
+
 
       {/* About Me Section */}
       <section className="about-section">

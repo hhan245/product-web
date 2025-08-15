@@ -30,22 +30,22 @@ export default function ContactPage() {
 
       <div className="social-icons-container">
         <a href="mailto:han.nx2404@gmail.com" className="social-icon">
-          <img src="/images/email.svg" alt="Email" />
+          <img src="/images/contact/email.svg" alt="Email" />
         </a>
         <a href="https://www.linkedin.com/in/hannx2404/" className="social-icon">
-          <img src="/images/linkedin.svg" alt="LinkedIn" />
+          <img src="/images/contact/linkedin.svg" alt="LinkedIn" />
         </a>
         <a href="https://github.com/hhan245" className="social-icon">
-          <img src="/images/github.png" alt="GitHub" />
+          <img src="/images/tools/github.png" alt="GitHub" />
         </a>
         <a href="https://www.facebook.com/eroohxxn/" className="social-icon">
-          <img src="/images/facebook.svg" alt="Facebook" />
+          <img src="/images/contact/facebook.svg" alt="Facebook" />
         </a>
         <a href="https://discord.com/users/eroohxxn" className="social-icon">
-          <img src="/images/discord.svg" alt="Discord" />
+          <img src="/images/contact/discord.svg" alt="Discord" />
         </a>
         <a href="https://www.instagram.com/its.haniu/" className="social-icon">
-          <img src="/images/instagram.svg" alt="CodeSandbox" />
+          <img src="/images/contact/instagram.svg" alt="Instagram" />
         </a>
       </div>
 
