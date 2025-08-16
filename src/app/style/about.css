@@ -47,6 +47,21 @@ body {
   background-color: var(--bg-primary);
   transition: all 0.3s ease;
 }
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section.fade-out {
+  opacity: 0;
+  transform: translateY(-40px);
+}
 
 /* Main Container */
 .about-container {
@@ -151,16 +166,36 @@ body {
 .sparkle {
   position: absolute;
   pointer-events: none;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
+  pointer-events: none;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle at 30% 30%, currentColor 0%, rgba(255,255,255,0.9) 25%, transparent 60%);
+  background: radial-gradient(circle, #ff69b4, transparent);
   filter: drop-shadow(0 0 6px currentColor);
   animation: sparkleOut 800ms ease-out forwards;
+  animation-delay: calc(var(--i) * 100ms);
+  
+  
 }
 
 @keyframes sparkleOut {
-  0%   { opacity: 1; transform: translate(-50%,-50%) scale(1); }
-  100% { opacity: 0; transform: translate(-50%,-50%) scale(0); }
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  30% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
 
 

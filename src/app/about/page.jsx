@@ -19,6 +19,28 @@ import {
 } from 'lucide-react';
 
 export default function AboutPage() {
+  useEffect(() => {
+    const sections = document.querySelectorAll(".section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            entry.target.classList.remove("fade-out");
+          } else {
+            entry.target.classList.remove("visible");
+            entry.target.classList.add("fade-out");
+          }
+        });
+      },
+      { threshold: 0.3 } // 30% section trong viewport
+    );
+
+    sections.forEach((sec) => observer.observe(sec));
+    return () => sections.forEach((sec) => observer.unobserve(sec));
+  }, []);
+
   const [theme, setTheme] = useState('dark');
   const [selectedSkill, setSelectedSkill] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -222,7 +244,7 @@ useEffect(() => {
 
 
       {/* About Me Section */}
-      <section className="about-section">
+      <section className="about-section section">
         <div className="section-header">
           <h2>Get to know me</h2>
           <div className="section-line"></div>
