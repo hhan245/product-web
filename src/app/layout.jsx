@@ -1,4 +1,5 @@
 import Loader from './components/loader';
+import { Analytics } from "@vercel/analytics/next"
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
       <body>
         {children}
         <Loader />
+        <Analytics />
       </body>
     </html>
   );
