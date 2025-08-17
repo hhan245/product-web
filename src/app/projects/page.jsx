@@ -26,7 +26,7 @@ const projects = [
     image: "/images/projects/pj3.png",
     link: "/projects/cart-patrol",
     type: "internal",
-    tags: ["UX/UI", "E-commerce", "Psychology"]
+    tags: ["UX/UI", "Research", "Psychology"]
   },
   {
     title: "💿 CD Sales Website",
@@ -36,6 +36,22 @@ const projects = [
     type: "github",
     tags: ["E-commerce", "Research", "Full-stack", "Analytics"]
   },
+  {
+    title: "🛢️ Oil Spill Detection",
+    description: "Applied machine learning techniques for binary classification of oil spill incidents using satellite imagery.",
+    image: "/images/projects/pj5.png",
+    link: "https://github.com/hhan245/Oil-Spill",
+    type: "external",
+    tags: ["Data Visualization", "Python"]
+  },
+  {
+    title: "🙂 Emotion Recognition",
+    description: "Worked on training machine learning models for emotion recognition using available datasets",
+    image: "/images/projects/pj6.png",
+    link: "https://github.com/hhan245/Emotion-Recognition",
+    type: "internal",
+    tags: ["Machine Learning", "Python"]
+  }
 ];
 
 export default function ProjectsPage() {

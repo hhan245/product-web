@@ -121,7 +121,7 @@ useEffect(() => {
       timeline: 'Aug 2019 - May 2022',
       location: 'Ho Chi Minh City, Vietnam',
       status: 'Graduated',
-      specialization: ['History', 'Literature'],
+      specialization: ['English', 'Chinese'],
       description: 'Specialized program with focus on English language and humanities, developing strong analytical and communication skills.'
     }
   ];
@@ -150,7 +150,7 @@ useEffect(() => {
       category: 'Data & Analytics',
       skills: [
         { name: 'Tableau', icon: '/tools/tableau.svg', level: 80 },
-        { name: 'SQL', icon: '/tools/sql.png', level: 60 },
+        { name: 'SQL', icon: '/tools/sql.png', level: 75 },
         { name: 'Excel', icon: '/tools/excel.png', level: 90 },
         { name: 'Python', icon: '/tools/python.png', level: 70 }
 
@@ -184,7 +184,7 @@ useEffect(() => {
       title: 'Nôm',
       role: 'Co-Founder',
       icon: Lightbulb,
-      timeline: '2022 - 2023',
+      timeline: '2024 - Present',
       description: 'Launched and managed a small Facebook-based sales page for custom 3D-printed items. Learned how to present products, engage customers, and improve based on feedback.',
       achievements: ['Product presentation', 'Customer engagement', 'Business development']
     }
@@ -252,10 +252,10 @@ useEffect(() => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              I'm currently pursuing opportunities as a <strong>Product Intern</strong>. With a strong interest in UX design, product discovery, and data-driven decision-making, I've worked on hands-on projects that simulate real product cycles from research to wireframing and testing.
+              I am passionate about combining user-centered design with data-driven insights to create meaningful product outcomes. Through hands-on projects, I have experienced end-to-end product cycles—from research and market analysis to wireframing, testing, and evaluation. My approach blends analytical thinking with creative problem-solving, always keeping both user needs and business goals at the center of every decision.
             </p>
             <p>
-              My approach combines analytical thinking with creative problem-solving, always keeping the user at the center of every decision. I believe in the power of data to tell stories and guide product strategy.
+              I believe that great products come from continuous learning and iteration. Each project I’ve worked on has not only sharpened my skills but also taught me valuable lessons about collaboration, adaptability, and the importance of empathy in design and analysis.
             </p>
           </div>
           <div className="interests-grid">
