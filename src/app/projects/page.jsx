@@ -51,6 +51,14 @@ const projects = [
     link: "https://github.com/hhan245/Emotion-Recognition",
     type: "internal",
     tags: ["Machine Learning", "Python"]
+  },
+  {
+    title: "🙂 Book Library",
+    description: "A responsive Book Library application built with Dart, allowing users to manage, categorize, and track their personal book collections.",
+    image: "/images/projects/pj7.png",
+    link: "https://github.com/hhan245/book-library",
+    type: "internal",
+    tags: ["Dart", "Flutter", "Mobile"]
   }
 ];
 
