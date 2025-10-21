@@ -13,12 +13,20 @@ const projects = [
     tags: ["Metaverse", "Healthcare", "Digital Twins"]
   },
   {
-    title: "🍕 The Jazza",
-    description: "A comprehensive sales management system for pizza ordering and delivery management. Features real-time order tracking and inventory management.",
-    image: "/images/projects/pj2.png",
-    link: "https://www.youtube.com/watch?v=iKXkZXyRXFg&ab_channel=Ph%C6%B0%C6%A1ngNghi",
+    title: "🍶 Vinamilk ",
+    description: "Designed an MVP featuring Elderly Mode with larger fonts, a voice-enabled chatbot, and caregiver-assisted ordering. Focused on usability and comfort to improve digital adoption among senior users.",
+    image: "/images/projects/vinamilk.png",
+    link: "https://www.canva.com/design/DAGlAEqiVQE/Z8F_VCjDrFTvOEZAQCwDWw/edit?utm_content=DAGlAEqiVQE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
     type: "external",
-    tags: ["Management", "Sales", "React"]
+    tags: ["Management", "UX", "Research"]
+  },
+  {
+    title: "Pomachy",
+    description: "Simulated launching a sustainable food startup from scratch. Developed a complete product lifecycle, go-to-market strategy, and financial plan. Balanced branding, product development, and market positioning to build a scalable business model.",
+    image: "/images/projects/pomachy.png",
+    link: "https://drive.google.com/file/d/14Mu4uPFBcehT-LZePgfj7A_zpScY0XyE/view?usp=sharing",
+    type: "external",
+    tags: ["Start up", "Product", "Lifecycle"]
   },
   {
     title: "🛒 Cart Patrol",
@@ -37,6 +45,22 @@ const projects = [
     tags: ["E-commerce", "Research", "Full-stack", "Analytics"]
   },
   {
+    title: "🍕 The Jazza",
+    description: "A comprehensive sales management system for pizza ordering and delivery management. Features real-time order tracking and inventory management.",
+    image: "/images/projects/pj2.png",
+    link: "https://www.youtube.com/watch?v=iKXkZXyRXFg&ab_channel=Ph%C6%B0%C6%A1ngNghi",
+    type: "external",
+    tags: ["Management", "Sales", "React"]
+  },
+  {
+    title: "🙂 Book Library",
+    description: "A responsive Book Library application built with Dart, allowing users to manage, categorize, and track their personal book collections.",
+    image: "/images/projects/pj7.png",
+    link: "https://github.com/hhan245/book-library",
+    type: "internal",
+    tags: ["Dart", "Flutter", "Mobile"]
+  },
+  {
     title: "🛢️ Oil Spill Detection",
     description: "Applied machine learning techniques for binary classification of oil spill incidents using satellite imagery.",
     image: "/images/projects/pj5.png",
@@ -52,14 +76,6 @@ const projects = [
     type: "internal",
     tags: ["Machine Learning", "Python"]
   },
-  {
-    title: "🙂 Book Library",
-    description: "A responsive Book Library application built with Dart, allowing users to manage, categorize, and track their personal book collections.",
-    image: "/images/projects/pj7.png",
-    link: "https://github.com/hhan245/book-library",
-    type: "internal",
-    tags: ["Dart", "Flutter", "Mobile"]
-  }
 ];
 
 export default function ProjectsPage() {
